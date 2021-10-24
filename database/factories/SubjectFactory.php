@@ -2,8 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\subject;
+use App\Models\Subject;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class SubjectFactory extends Factory
 {
@@ -12,7 +13,7 @@ class SubjectFactory extends Factory
      *
      * @var string
      */
-    protected $model = subject::class;
+    protected $model = Subject::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +23,10 @@ class SubjectFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "code" => $this->faker->unique()->word,
+            "libel" => Str::random(8),
+            "coefficient" => $this->faker->numberBetween(1, 100),
+            "module_id" => $this->faker->numberBetween(1, 10),
         ];
     }
 }

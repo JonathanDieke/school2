@@ -16,6 +16,7 @@ class CreateEvaluationTypesTable extends Migration
         Schema::create('evaluation_types', function (Blueprint $table) {
             $table->id();
             $table->string('libel');
+            $table->integer('coefficient');
             $table->timestamps();
         });
     }

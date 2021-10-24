@@ -1,0 +1,2 @@
+ajouter laravel debugbar
+install jetstream

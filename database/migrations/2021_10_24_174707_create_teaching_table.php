@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOptionsTable extends Migration
+class CreateTeachingTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateOptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('options', function (Blueprint $table) {
+        Schema::create('teaching', function (Blueprint $table) {
             $table->id();
-            $table->string('code')->unique();
-            $table->string('libel');
+            $table->foreignId('subject_id')->constrained('subjects');
+            $table->foreignId('teacher_id')->constrained('teachers');
+            $table->unique(["subject_id", "teacher_id"]); 
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateOptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('options');
+        Schema::dropIfExists('teaching');
     }
 }

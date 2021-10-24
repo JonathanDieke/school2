@@ -18,6 +18,7 @@ class CreateStudentsTable extends Migration
             $table->string('register')->unique();
             $table->string('name');
             $table->string('lname');
+            $table->string('email');
             $table->date('birthday');
             $table->string('gender');
             $table->foreignId('classroom_id')->constrained('classrooms');

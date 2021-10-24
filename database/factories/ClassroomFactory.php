@@ -2,8 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\classroom;
+use App\Models\Classroom;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class ClassroomFactory extends Factory
 {
@@ -12,7 +13,7 @@ class ClassroomFactory extends Factory
      *
      * @var string
      */
-    protected $model = classroom::class;
+    protected $model = Classroom::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +23,8 @@ class ClassroomFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "code" => $this->faker->unique()->word,
+            "libel" => Str::random(8),
         ];
     }
 }

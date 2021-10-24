@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\evaluationType;
+use App\Models\EvaluationType;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class EvaluationTypeFactory extends Factory
@@ -12,7 +12,7 @@ class EvaluationTypeFactory extends Factory
      *
      * @var string
      */
-    protected $model = evaluationType::class;
+    protected $model = EvaluationType::class;
 
     /**
      * Define the model's default state.

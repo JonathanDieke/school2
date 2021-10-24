@@ -2,8 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\level;
+use App\Models\Level;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class LevelFactory extends Factory
 {
@@ -12,7 +13,7 @@ class LevelFactory extends Factory
      *
      * @var string
      */
-    protected $model = level::class;
+    protected $model = Level::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +23,8 @@ class LevelFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "code" => $this->faker->unique()->word,
+            "libel" => Str::random(8),
         ];
     }
 }

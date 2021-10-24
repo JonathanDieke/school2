@@ -2,8 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\option;
+use App\Models\Option;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class OptionFactory extends Factory
 {
@@ -12,7 +13,7 @@ class OptionFactory extends Factory
      *
      * @var string
      */
-    protected $model = option::class;
+    protected $model = Option::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +23,8 @@ class OptionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "code" => $this->faker->unique()->word,
+            "libel" => Str::random(8),
         ];
     }
 }

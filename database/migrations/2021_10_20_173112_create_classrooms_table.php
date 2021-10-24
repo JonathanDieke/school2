@@ -17,8 +17,8 @@ class CreateClassroomsTable extends Migration
             $table->id();
             $table->string('code')->unique();
             $table->string('libel');
-            $table->foreignId('level_id')->constrained('levels');
-            $table->foreignId('option_id')->constrained('options');
+            // $table->foreignId('option_id')->constrained('options');
+            // $table->foreignId('level_id')->constrained('levels');
             $table->timestamps();
         });
     }

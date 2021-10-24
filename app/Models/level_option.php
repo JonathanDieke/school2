@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class level_option extends Pivot
+class Level_Option extends Pivot
 {
     //
 }
