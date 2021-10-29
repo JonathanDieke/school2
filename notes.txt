@@ -1,2 +1,3 @@
-ajouter laravel debugbar
-install jetstream
+(ok) ajouter laravel debugbar
+(ok) install jetstream
+(ok) comprendre l'auhentification
