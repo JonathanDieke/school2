@@ -24,7 +24,7 @@ class StudentFactory extends Factory
     {
         return [
             'register' => $this->faker->numberBetween(int1:100, int2 :1000),
-            'name' => $this->faker->firstName(),
+            'fname' => $this->faker->firstName(),
             'lname' => $this->faker->lastName(),
             'email' => $this->faker->unique()->safeEmail(),
             'birthday' => $this->faker->dateTimeBetween('-25 years', '-10 years'),

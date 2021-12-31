@@ -11,6 +11,8 @@ class Student extends Model
 {
     use HasFactory;
 
+    protected $guarded = [] ;
+
     /**
      * Get the classroom that owns the student
      *
